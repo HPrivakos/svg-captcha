@@ -40,7 +40,7 @@
   "files": [
     "fonts/*",
     "lib/*",
-    "index.d.ts",
+    "index.ts",
     "*.md"
   ]
 }
