@@ -1,5 +1,6 @@
 'use strict';
-const svgCaptcha = require('../');
+import * as svgCaptcha from "../index"
+import { default as svg } from "../index"
 
 test('Generate random test', () => {
 	for (let i = 0; i < 100; i++) {
@@ -9,7 +10,7 @@ test('Generate random test', () => {
 });
 
 test('Filter chars', () => {
-	const opt = {ignoreChars: '0123456789'};
+	const opt = { ignoreChars: '0123456789' };
 	for (let i = 0; i < 100; i++) {
 		const text = svgCaptcha.randomText(opt);
 		expect(text).toMatch(/^[a-zA-Z]+$/);
@@ -18,8 +19,8 @@ test('Filter chars', () => {
 
 const xmlReg = /^<svg[\s\S]+\/svg>$/;
 test('Old svgCaptcha() api', () => {
-	expect(svgCaptcha()).toMatch(xmlReg);
-	expect(svgCaptcha('abcd')).toMatch(xmlReg);
+	expect(svg()).toMatch(xmlReg);
+	expect(svg('abcd')).toMatch(xmlReg);
 });
 
 test('Current create() api', () => {
@@ -39,7 +40,7 @@ test('Global charPreset options', () => {
 });
 
 test('Local charPreset options', () => {
-	const opt = {charPreset: '0123456789'};
+	const opt = { charPreset: '0123456789' };
 	for (let i = 0; i < 100; i++) {
 		const text = svgCaptcha.randomText(opt);
 		expect(text).toMatch(/^[0-9]+$/);

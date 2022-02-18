@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steambap/svg-captcha.git"
+    "url": "git+https://github.com/hprivakos/svg-captcha.git"
   },
   "keywords": [
     "captcha",
@@ -19,37 +19,24 @@
     "captcha alternative"
   ],
   "author": {
-    "name": "Weilin Shi",
-    "email": "934587911@qq.com"
+    "name": "Kyllian"
   },
   "engines": {
     "node": ">=4.x"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steambap/svg-captcha/issues"
+    "url": "https://github.com/hprivakos/svg-captcha/issues"
   },
-  "homepage": "https://github.com/steambap/svg-captcha#readme",
+  "homepage": "https://github.com/hprivakos/svg-captcha#readme",
   "dependencies": {
     "opentype.js": "^0.7.3"
   },
   "devDependencies": {
-    "jest": "^21.1.0",
-    "jest-environment-node-debug": "^2.0.0",
-    "xo": "^0.18.2"
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3"
   },
-  "xo": {
-    "esnext": true,
-    "envs": [
-      "jest"
-    ],
-    "rules": {
-      "linebreak-style": [
-        0
-      ]
-    }
-  },
-  "typings": "index.d.ts",
   "files": [
     "fonts/*",
     "lib/*",

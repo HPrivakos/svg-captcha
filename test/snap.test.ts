@@ -1,5 +1,5 @@
 'use strict';
-const svgCaptcha = require('../');
+import * as svgCaptcha from "../index"
 // Quick seeded random
 let seed = 10;
 Math.random = jest.fn(() => {
